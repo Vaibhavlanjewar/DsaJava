@@ -1,6 +1,6 @@
 import java.util.*;
 
-public classBST_SEARCH_KEY {
+public class BST_SEARCH_KEY {
     static class Node{
         int data; //data
         Node left;
