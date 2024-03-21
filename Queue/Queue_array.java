@@ -60,5 +60,5 @@ public class Queue_array{
             q.remove();
         }
     }
-
+// vnbl
 }
