@@ -42,3 +42,5 @@ public class LinearSearch {
         }
     }
 }
+
+// Time Complexity O(N);
