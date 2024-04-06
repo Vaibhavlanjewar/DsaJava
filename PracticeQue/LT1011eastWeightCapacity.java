@@ -1,4 +1,5 @@
 public class LT1011eastWeightCapacity{
+    //https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/solutions/
     public static int maxi(int[] nums) {
         int max=Integer.MIN_VALUE;
         for(int i:nums){
