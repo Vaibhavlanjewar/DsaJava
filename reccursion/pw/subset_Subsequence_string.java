@@ -28,7 +28,7 @@ public class subset_Subsequence_string {
 
         // subset of the arr
         int arr[]={1,2,3};
-        ArrayList<ArrayList<Integer>>ans=subset(arr);
+        ArrayList<ArrayList <Integer>>ans=subset(arr);
         System.out.println(ans);
     
     }

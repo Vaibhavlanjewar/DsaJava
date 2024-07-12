@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "backtracking_question",
+            "request": "launch",
+            "mainClass": "backtracking_question",
+            "projectName": "reccursion_eb0bb7"
+        },
+        {
+            "type": "java",
             "name": "pattern_bubble_select_sort",
             "request": "launch",
             "mainClass": "pattern_bubble_select_sort",
