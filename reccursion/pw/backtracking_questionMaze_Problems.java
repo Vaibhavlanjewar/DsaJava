@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class backtracking_question {
+public class backtracking_questionMaze_Problems {
     public static void main(String[] args) {
         // System.out.println(count_ways_in_maze(3,3));
 
