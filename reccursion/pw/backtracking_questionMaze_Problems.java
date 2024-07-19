@@ -168,4 +168,54 @@ public class backtracking_questionMaze_Problems {
         path[r][c] = 0; // for backtracking
     }
 
+   
+    public static ArrayList<String> allPath1(String p, int[][] maze, int r, int c) {
+        if (r == maze.length - 1 && c == maze[0].length - 1) {
+            // System.out.println(p);
+            ArrayList<String>list=new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+        ArrayList<String>list=new ArrayList<>();
+        if (maze[r][c]==0) {
+            return list;
+            // return;
+        }
+        // i am considering this block in my path
+        maze[r][c] = 0;
+
+        if (r < maze.length - 1) { // down
+            list.addAll(allPath1(p + 'D', maze, r + 1, c));
+        }
+        if (c < maze[0].length - 1) { // right
+            list.addAll(allPath1(p + 'R', maze, r, c + 1));
+        }
+
+        if (r > 0) { // up
+            list.addAll(allPath1(p + 'U', maze, r - 1, c));
+        }
+
+        if (c > 0) { // left
+            list.addAll(allPath1(p + 'L', maze, r, c - 1));
+        }
+
+        // this line is where the function will over
+        // so beforee the function gets removed also changes that were made by that
+        // function
+
+        maze[r][c] = 1;
+        return list;
+    }
+  
+
+    //gfg que 
+    public static ArrayList<String> findPath(int[][] m, int n) {
+        // Your code here
+        ArrayList<String> ans = new ArrayList<String>();
+        if (m[0][0] == 1) {
+       ans = allPath1("", m, 0, 0);
+       }
+    return ans;
+}
+
 }
