@@ -19,7 +19,7 @@ class rearrangeArrayBy_sign {
           }
         //   i=0;
         for(int i=0;i<s;i++){
-            if(i%2==0) nums[i]=p[i/2/2];
+            if(i%2==0) nums[i]=p[i/2];
             else nums[i]=n[i];
         }
         return nums;
