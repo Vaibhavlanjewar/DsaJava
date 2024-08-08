@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Binary_Search_tree {
     static class Node {
         int data;
@@ -98,6 +100,39 @@ public class Binary_Search_tree {
             printInRange(root.right,k1,k2);
         }
     }
+// -------------------------------------------------------
+// print root 2 leaf path
+   public static void printPath(ArrayList<Integer>path){
+    for(int i=0;i<path.size();i++){
+        System.out.print(path.get(i)+ "->");
+    }
+    System.out.println("null");
+   }
+
+    public static void printRoot2Leaf(Node root,ArrayList<Integer>path){
+        if(root==null) return ;
+        path.add(root.data);
+        if(root.left==null && root.right==null){
+            printPath(path);
+        }
+       
+        printRoot2Leaf(root.left, path);
+        printRoot2Leaf(root.right,path);
+        path.remove(path.size()-1);
+    }
+
+    // Is Valid Bst
+    public static boolean isValidBst(Node root,Node min,Node max){
+        if(root==null)return true;
+        if(min!=null && root.data<=min.data){
+         return false;
+        }
+        else if(max!=null &&root.data>=max.data){
+            return false;
+        }
+        return isValidBst(root.left, min, root) && isValidBst(root.right, root, max);
+
+    }
     public static void main(String args[]) {
         int values[] = { 8, 5, 3, 1, 4, 6, 10, 11, 14 };
         Node root = null;
@@ -123,6 +158,17 @@ public class Binary_Search_tree {
         System.out.println("\nPrint in range 5-12");
         printInRange(root,5,12);
        
+    //   print root 2 leaf
+     System.out.println("\n\nPrint root to path");
+     printRoot2Leaf(root,new ArrayList<>());
+ 
+    //  Is valid Bst
+    if(isValidBst(root, null, null)){
+        System.out.println("\nValid bst");
+    }
+    else{
+        System.out.println("Not valid");
+    }
 
     }
 }
