@@ -133,6 +133,24 @@ public class Binary_Search_tree {
         return isValidBst(root.left, min, root) && isValidBst(root.right, root, max);
 
     }
+
+    // ----------- Mirror of tree ------------
+    public static Node createMirror(Node root){
+        if(root==null)return null;
+        Node leftMirror=createMirror(root.left);
+        Node rightMirror=createMirror(root.right);
+
+        root.left=rightMirror;
+        root.right=leftMirror;
+        return root;
+    }
+    public static void preorder(Node root) {
+        if (root == null)
+            return;
+        System.out.print(root.data + " ");
+        preorder(root.left);
+        preorder(root.right);
+    }
     public static void main(String args[]) {
         int values[] = { 8, 5, 3, 1, 4, 6, 10, 11, 14 };
         Node root = null;
@@ -150,9 +168,9 @@ public class Binary_Search_tree {
         }
 
         // delete node
-        System.out.println("\nDelete Node");
-        root = delete(root, 10);
-        inorder(root);
+        // System.out.println("\nDelete Node");
+        // root = delete(root, 10);
+        // inorder(root);
         
         // PrintIn range 
         System.out.println("\nPrint in range 5-12");
@@ -170,5 +188,10 @@ public class Binary_Search_tree {
         System.out.println("Not valid");
     }
 
+    //   Mirror imgage 
+    preorder(root);
+    System.out.println("\n ");
+    Node mirrorNode=createMirror(root);
+    preorder(mirrorNode);
     }
 }
