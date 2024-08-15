@@ -13,6 +13,8 @@ public class Graph {
         }
     }
 
+
+    // Time complexity is 0(n)
     public static void createGraph(ArrayList<Edge>graph[]){
         for (int i = 0; i <graph.length; i++) {
             graph[i] = new ArrayList<>();
@@ -45,7 +47,7 @@ public class Graph {
     }
 
 
-    // BFS -breadth first search 
+    // BFS -breadth first search  , Time complexity is 0(V+E)
     public static void bfs(ArrayList<Edge>[]graph){
         Queue<Integer>q=new LinkedList<>();
         boolean[] visited=new boolean[graph.length];
@@ -105,7 +107,7 @@ public class Graph {
 
 
         // -------------------------
-        
+
         int v = 6;
         ArrayList<Edge>[] graph = new ArrayList[v]; // null -->khali ...khuv=ch bhi defined nhi hain
         createGraph(graph);
