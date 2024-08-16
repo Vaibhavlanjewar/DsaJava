@@ -69,6 +69,34 @@ public class Graph {
         }
     }
 
+    // DFS -Depth first search 
+    public static void dfs(ArrayList<Edge>[]graph,int curr,boolean vis[]){
+        // Visit
+        System.out.print(curr+" ");
+        vis[curr]=true;
+
+        for(int i=0;i<graph[curr].size();i++){
+            Edge e=graph[curr].get(i);
+            if(!vis[e.dest]){
+                dfs(graph,e.dest,vis);
+            }
+        }
+    }
+
+    // Has Path -->question 
+    public static boolean hasPath(ArrayList<Edge>[]graph,int src,int dest,boolean vis[]){
+        if(src==dest){
+            return true;
+        } 
+        vis[src]=true;
+        for(int i=0;i<graph[src].size();i++){
+            Edge e=graph[src].get(i);
+            if(!vis[e.dest]&& hasPath(graph, e.dest, dest, vis)){
+                return true;
+            }
+        }
+        return false;
+    }
     public static void main(String args[]) {
         // int v = 5;
         // ArrayList<Edge>[] graph = new ArrayList[v]; // null -->khali ...khuv=ch bhi defined nhi hain
@@ -111,7 +139,20 @@ public class Graph {
         int v = 6;
         ArrayList<Edge>[] graph = new ArrayList[v]; // null -->khali ...khuv=ch bhi defined nhi hain
         createGraph(graph);
-         bfs(graph);
+        // bfs 
+        // System.out.println("BFS");
+        //  bfs(graph);
+
+        // dfs
+        //   graph,src,vis
+        // System.out.println("DFS");
+        // dfs(graph,0,new boolean[v]);
+
+        // hasPath
+        System.out.println("Has Path");
+        System.out.println(hasPath(graph, 0, 5,new boolean[v])); // true
+        
+
                    
 
     }
