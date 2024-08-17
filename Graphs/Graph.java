@@ -18,15 +18,16 @@ public class Graph {
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>();
         }
-        // Creating a new DAG for topological sort
-        graph[0].add(new Edge(0, 1, 1));
-        graph[0].add(new Edge(0, 2, 1));
-        graph[1].add(new Edge(1, 3, 1));
-        graph[2].add(new Edge(2, 3, 1));
-        graph[2].add(new Edge(2, 4, 1));
-        graph[3].add(new Edge(3, 5, 1));
-        graph[4].add(new Edge(4, 5, 1));
-    }
+        for (int i = 0; i < graph.length; i++) {
+            graph[i] = new ArrayList<>();
+        }
+        // for bellman
+        graph[0].add(new Edge(0, 1, 2));
+        graph[0].add(new Edge(0, 2, 4));
+        graph[1].add(new Edge(1, 2, -4));
+        graph[2].add(new Edge(2, 3, 2));
+        graph[3].add(new Edge(3, 4, 4));
+        graph[4].add(new Edge(4, 1, -1));    }
 
     // BFS -breadth first search , Time complexity is 0(V+E)
     public static void bfs(ArrayList<Edge>[] graph) {
@@ -151,37 +152,109 @@ public class Graph {
     }
 
     public static void dijkstra(ArrayList<Edge> graph[], int src) {
-    int dist[]=new int[graph.length];
-    for(int i=0;i<graph.length;i++){
-        dist[i]=Integer.MAX_VALUE;
-    }
-    boolean vis[]=new boolean[graph.length];
-    PriorityQueue<Pair>pq=new PriorityQueue<>();
-    pq.add(new Pair(src,0));
+        int dist[] = new int[graph.length];
+        for (int i = 0; i < graph.length; i++) {
+            dist[i] = Integer.MAX_VALUE;
+        }
+        boolean vis[] = new boolean[graph.length];
+        PriorityQueue<Pair> pq = new PriorityQueue<>();
+        pq.add(new Pair(src, 0));
 
-    while(!pq.isEmpty()){
-        Pair curr=pq.remove();
-         if(!vis[curr.n]){
-         vis[curr.n]=true;
-         for(int i=0;i<graph[curr.n].size();i++){
-            Edge e=graph[curr.n].get(i);
-            int u=e.src;
-            int v=e.dest;
-            int wt=e.wt;
+        while (!pq.isEmpty()) {
+            Pair curr = pq.remove();
+            if (!vis[curr.n]) {
+                vis[curr.n] = true;
+                for (int i = 0; i < graph[curr.n].size(); i++) {
+                    Edge e = graph[curr.n].get(i);
+                    int u = e.src;
+                    int v = e.dest;
+                    int wt = e.wt;
 
-            if(dist[u]+wt<dist[v]){ //update distance of src to v;
-                dist[v]=dist[u]+wt;
-                pq.add(new Pair(v,dist[v]));
+                    if (dist[u] + wt < dist[v]) { // update distance of src to v;
+                        dist[v] = dist[u] + wt;
+                        pq.add(new Pair(v, dist[v]));
+                    }
+                }
             }
-         }
-         }
+        }
+
+        // print all source to vertices shortest path
+        for (int i = 0; i < dist.length; i++) {
+            System.out.print(dist[i] + " ");
+        }
+        System.out.println();
     }
-    
-    //print all source to vertices shortest path 
-    for(int i=0;i<dist.length;i++){
-        System.out.print(dist[i]+" ");
+
+    // Bellman ford Algorithm
+    public static void bellmanFord(ArrayList<Edge> graph[], int src) {
+        int dist[] = new int[graph.length];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[src] = 0;
+
+        int V = graph.length;
+        // algo 0(v*E) total time complexity  
+        // 0(v)
+        for (int i = 0; i < V - 1; i++) {
+            // edges - 0(E) time complexity even if 3loop are there
+            for (int j = 0; j < graph.length; j++) {
+                for (int k = 0; k < graph[j].size(); k++) {
+                    Edge e = graph[j].get(k);// src,dest,wt
+                    int u = e.src;
+                    int v = e.dest;
+                    int wt = e.wt;
+
+                    // relaxation step
+                    if (dist[u] != Integer.MAX_VALUE && dist[u] + wt < dist[v]) {
+                        dist[v] = dist[u] + wt;
+                    }
+                }
+            }
+        }
+
+        // print shortest dist 
+        for(int i=0;i<dist.length;i++){
+            System.out.print(dist[i]+" ");
+        }
+        System.out.println();
     }
-    System.out.println();
+
+    // ----- Prisms Algorithm find MST-------------
+    static class Pair1 implements Comparable<Pair1>{
+        int v; //vertex
+        int cost; //cost
+        public Pair1(int v,int c){
+            this.v=v;
+            this.cost=c;
+        }
+        @Override 
+        public int compareTo(Pair1 p2){
+            return this.cost-p2.cost; //asceding
+        }
+
+    }
+    public static void prims(ArrayList<Edge>graph[]){
+        boolean vis[]=new boolean[graph.length];
+        PriorityQueue<Pair1> pq=new PriorityQueue<>();
+
+        // add src
+        pq.add(new Pair1(0,0));
+        int finalCost=0; //mst cost total min wt
+
+        while(!pq.isEmpty()){
+            Pair1 curr=pq.remove();
+            if(!vis[curr.v]){
+                vis[curr.v]=true;
+                finalCost+=curr.cost;
+
+                for(int i=0;i<graph[curr.v].size();i++){
+                    Edge e=graph[curr.v].get(i);
+                    pq.add(new Pair1(e.dest,e.wt));
+                }
+            }
+
+        }
+        System.out.println("Final min cost of mst is = "+finalCost);
+
     }
 
     // ----------------------------------------
@@ -247,7 +320,14 @@ public class Graph {
         // printAllPath(graph, src, dest, "");
 
         // Dijkstras shortest path from all verices algorithm
-        int src=0;
-        dijkstra(graph, src);
+        // int src=0;
+        // dijkstra(graph, src);
+
+
+        // Bellman ford alogorithm , for negative wt 
+        // bellmanFord(graph, 0);
+
+      prims(graph);
+
     }
 }
