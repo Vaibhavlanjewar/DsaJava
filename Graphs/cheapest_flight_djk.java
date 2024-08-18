@@ -66,7 +66,7 @@ public class cheapest_flight_djk {
                 int v=e.dest;
                 int wt=e.wt;
 
-                // relaxation  infinty                relaxation         stos <=k 
+                // relaxation  infinty      stos <=k 
                 if( curr.cost+wt<dist[v] && curr.stops<=k){
                     dist[v]=curr.cost+wt;
                     q.add(new Info(v,dist[v],curr.stops+1));
