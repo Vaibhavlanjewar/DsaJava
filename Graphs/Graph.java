@@ -326,7 +326,8 @@ public class Graph {
 
         // Bellman ford alogorithm , for negative wt 
         // bellmanFord(graph, 0);
-
+       
+     System.out.println("prims");  
       prims(graph);
 
     }
