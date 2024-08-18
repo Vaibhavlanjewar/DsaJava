@@ -26,19 +26,24 @@ public class q8 {
 
 public static void main(String args[]){
 
- Scanner sc=new Scanner(System.in);
+ Scanner sc = new Scanner(System.in);
  int n=sc.nextInt();
- String bin="";
- while(n!=0){
-  bin=(n&1)+bin;
-  n=n>>1;
-  }
-  bin=bin.replaceAll("1","2");
-  bin=bin.replaceAll("0","1");
-  bin=bin.replaceAll("2","0");
-  int res=Integer.parseInt(bin,2);
-System.out.println(res);
+
+ StringBuilder sb =new StringBuilder();
+
+ while(n>0){
+    int a=0;
+    a=n&1;
+    if(a==0){
+        sb.insert((char)1,0);
+    }else{
+        sb.insert((char)0,0);
+    }
+    
+    n=n>>1;
+ }
   
+ System.out.println(Integer.parseInt(sb.toString()));
  
  }   
 }
