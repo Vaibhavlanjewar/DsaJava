@@ -58,16 +58,18 @@ public class rslab {
 //     }
 //     System.out.println(i+1);
 
-int a[]={2,4,5,7,1,8,9};
-int sum=0;
-for(int i=0;i<a.length-1;i++){
-   if(a[i]%2==1){
-    sum+=a[i];
-    System.out.println(a[i]);
-   }
-}
-System.out.println(sum);
-}
-}
-
+// int a[]={2,4,5,7,1,8,9};
+// int sum=0;
+// for(int i=0;i<a.length-1;i++){
+//    if(a[i]%2==1){
+//     sum+=a[i];
+//     // System.out.println(a[i]);
+//    }
+// }
+// System.out.println(sum);
+// }
+ 
+// }
+    }
 //  6 + 15 + 14 +19 +20  c 
+}
