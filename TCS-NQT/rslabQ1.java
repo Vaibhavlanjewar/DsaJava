@@ -68,7 +68,7 @@ Output: b=1, f=2, Total=3 */
         }
     }
     System.out.println(sb.toString());
-    // sb.deleteCharAt(sb.length()-1);
+   
  }
  public static void question2(int arr[]){
     int cnt=0;
@@ -124,11 +124,13 @@ for(char ch:s){
     System.out.println("total="+sum);
  
 }
+
+// ------------------------------
  public static void main(String args[]){
 //    question1();
 
 // question 2
-//   Scanner sc=new Scanner(System.in);
+  Scanner sc=new Scanner(System.in);
 //   int n=sc.nextInt();
 //   int arr[]=new int[6];
 
@@ -142,7 +144,11 @@ for(char ch:s){
 //  int[]arr={14, 12, 70, 15, 95, 65, 22, 30};
 //   System.out.println(secondMax_diff(arr));
 
-question4();
+// question4();
+
+// question 5 
+int v=sc.nextInt();
+System.out.println(question5(v));
 
 
  }

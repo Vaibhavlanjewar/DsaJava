@@ -1,0 +1,342 @@
+
+Programming Test
+
+This paper has been designed to test your programming abilities – it is meant to be a starting point for further discussion and provides you an opportunity to highlight your skills. You can take the test in the programming language of your choice. Your code doesn’t have to compile exactly but it should be reasonably close (pseudo-code is not OK).
+If you are unsure about something, or make an assumption, write the assumption as part of your answer. Good luck ☺
+
+Test duration is 60 minutes.
+
+
+
+A-1: Write a function that takes an input parameter as a String. The function should replace the alternate words in it with “xyz” and print it. Words are separated by dots. (Avoid using inbuilt functions)
+
+If input is “i.like.this.program.very.much”
+Output will be “i.xyz.this.xyz.very.xyz”
+
+Import java.util.*;
+public class rslab{
+Public static void main(String argos[]){
+//input
+Scanner sc=new Scanner(System.in);
+String str=sc.next();
+String []s=str.split(“\\.”); //split by .
+int n=s.length;
+for(int i=0;i<n;i++){
+if(i%2==1){ //this  condition for alternate word replacemet
+s[i]=”xyz”; 
+   }
+}
+StringBuilder sb=new StringBuilder();
+sb.append(s[i]);
+if(i<n-1){
+sb.append(“.”);
+  }
+System.out.println(sb.toString());
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+A-2: Given a binary string (string containing only 0’s and 1’s) “str” that contains at least a single occurrence of a numeric value: '1'.
+You have to rearrange the characters in the string in such a way that the resulting binary string is the maximum odd binary number that can be created from this combination.
+Note that the resulting string can have leading zeros.
+Examples:
+1. Input: str = "010"
+Output: "001"
+2. Input: str = "01010"
+Output: "10001"
+
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class rslab{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Binary String: ");
+        String s=sc.next();
+
+        // to convert the given binary string into maximum odd binary num
+        int count1=0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='1'){
+                count1++;
+            }
+        }
+        char ch[]=s.toCharArray();
+        Arrays.fill(ch,'?');
+        ch[ch.length-1]='1';
+        count1--;
+        int i=0;
+        while(count1-->0){
+            ch[i]='1';
+            i++;
+        }
+        while(i< ch.length-1){
+            if(ch[i]=='?'){
+                ch[i]='0';
+            }
+            i++;
+        }
+
+        StringBuilder sb=new StringBuilder();
+        for(int j=0;j<ch.length;j++){
+            sb.append(ch[j]);
+        }
+        System.out.println(sb.toString());
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A-3: Write a program to find the equilibrium element from an integer array. An equilibrium element is defined as the number for which the sum of left side elements is equal to sum of right side elements. 
+
+
+Note: If no possible combination exists return 0.
+
+
+Examples:
+1. Input: [1,7, 5, 2, 6]
+Output: 5 (since 1 + 7 = 8 and 2 + 6 = 8)
+
+
+2. Input: [10, 1, 1, 9] 
+Output: 1 (since 1 + 9 = 10 and first element is 10)
+
+
+Import java.util.*;
+Public class rslab{
+Public static int equilibrium( int arr[]){
+Int total=0;
+for(int i:arr){
+total+=num;
+}
+Int leftSum=0;
+for(int i=0;i<arr.length;i++){
+Int rightSum=total-leftSum-arr[i];
+if(leftSum ==rightSum){
+return arr[i];
+  }
+leftSum+=arr[i];
+}
+Return 0;
+}
+
+Public static void main(String args[]) {
+  Scanner sc=new Scanner(System.in);
+ System.out. println(“Enter size”);
+  Int n=sc.nextInt();
+  Int arr[]=new int[n];
+   
+  for(int i=0;i<n;i++){
+   arr[i]=sc.nextInt();
+  }
+ System.out.print(equilibrium(arr));
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A-4: Given an encoded string, return its decoded string.
+The encoding rule is ‘k[encoded_string]’, where the ‘encoded_string’ inside the square brackets is being repeated exactly ‘k’ times.
+
+You may assume that ‘encoded_string’ will only consist of lower case alphabets and ‘k’ will always be greater than 0.
+Note: The ‘encoded_string’ can be nested as well. Refer example 2 for clarification.
+Examples:
+1. Input: s = "3[a]2[bc]"
+Output: "aaabcbc"
+
+2. Input: s = "3[a2[c]]"
+Output: "accaccacc
+Import java.util.*;
+Public class rslab{
+
+Public static String decodeString(String s){
+Stack<Integer>cnt=new Stack<>();
+Stack<StringBuilder>str=new Stack<>();
+StringBuilder res=new StringBuilder();
+Int k=0;
+for(char ch:s.toCharArray()){
+if(Character.isDigit(ch)){
+K=k*10+(ch-’0);;
+}
+Else if(){
+cnt.push(k);
+str.push(res);
+res=new StringBuilder();
+k=0;
+ }else if(ch==’]){
+StringBuilder decode=str.pop();
+Int reapeaTimes=countStack.pop();
+for(int i=0;i<reapeateTimes;i++){
+decode.append(res);
+}
+res=decode;
+
+}
+Else{
+res.append(ch);
+}
+}
+return res.toString();
+
+}
+Public static void main(String[] args){
+ Scanner sc=new Scanner(System.in);
+ String str=sc.nextInt();
+ System.out.print(decodeString(str));
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A-5: Given a string ‘s’ consisting only of characters 'a', 'b', and 'c'. You are asked to apply the following algorithm on the string any number of times:
+1. Pick a non-empty prefix from the string ‘s’ where all the characters in the prefix are the same.
+2. Pick a non-empty suffix from the string ‘s’ where all the characters in this suffix are the same.
+3. The prefix and the suffix should not intersect at any index.
+4. The characters from the prefix and suffix must be the same.
+5. Delete both the prefix and the suffix.
+6. Return the minimum length of ‘s’ after performing the above operation any number of times (possibly zero times).
+
+Examples:
+
+1. Input: s = "ca"
+Output: 2
+Explanation: You can't remove any characters, so the string stays as is.
+
+2. Input: s = "aabccabba"
+Output: 3
+Explanation: An optimal sequence of operations is:
+- Take prefix = "aa" and suffix = "a" and remove them, s = "bccabb".
+- Take prefix = "b" and suffix = "bb" and remove them, s = "cca".
+
+
+
+
+import java.util.*;
+public class rslab {
+    public static int minimumLength(String s) {
+        int left = 0;
+        int right = s.length() - 1;
+
+
+        while (left < right && s.charAt(left) == s.charAt(right)) {
+            char currentChar = s.charAt(left);
+          
+            while (left <= right && s.charAt(left) == currentChar) {
+                left++;
+            }
+           
+            while (left <= right && s.charAt(right) == currentChar) {
+                right--;
+            }
+        }
+
+
+        
+        return right - left + 1;
+    }
+
+
+    public static void main(String[] args) {
+     Scanner sc=new Scanner(System.in);
+       String str=sc.ne
+
+
+    }
+}
+
+
+
+
