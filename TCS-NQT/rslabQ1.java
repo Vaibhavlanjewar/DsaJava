@@ -147,8 +147,8 @@ for(char ch:s){
 // question4();
 
 // question 5 
-int v=sc.nextInt();
-System.out.println(question5(v));
+// int v=sc.nextInt();
+// System.out.println(question5(v));
 
 
  }

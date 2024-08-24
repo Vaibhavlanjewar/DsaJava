@@ -43,9 +43,9 @@ https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1?
 
 import java.util.ArrayList;
 
-public class q21_kSizedSubArrayMximum {
-     public static ArrayList <Integer> max_of_subarrays(int arr[], int n, int k)
-    {
-        // Your code here
-    }
-}
+// public class q21_kSizedSubArrayMximum {
+//      public static ArrayList <Integer> max_of_subarrays(int arr[], int n, int k)
+//     {
+//         // Your code here
+//     }
+// }
