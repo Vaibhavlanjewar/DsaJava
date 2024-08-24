@@ -3,5 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/ArrayList" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TCS-NQT" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/reccursion" vcs="Git" />
   </component>
 </project>
