@@ -42,10 +42,31 @@ https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1?
 */
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 
-// public class q21_kSizedSubArrayMximum {
-//      public static ArrayList <Integer> max_of_subarrays(int arr[], int n, int k)
-//     {
-//         // Your code here
-//     }
-// }
+public class q21_kSizedSubArrayMximum {
+      static ArrayList <Integer> max_of_subarrays(int arr[], int n, int k)
+    {  // only 900/1100 test cases solves o
+
+        // Your code here
+        ArrayList<Integer>res=new ArrayList<>();
+            
+            for(int i=0;i<=n-k;i++){
+            PriorityQueue<Integer>pq= new PriorityQueue<>((a, b) -> b - a);
+                for(int j=i;j<i+k;j++){
+                    pq.add(arr[j]);
+                  }
+                 res.add( pq.peek());
+                 
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+       int arr[] = {8, 5, 10, 7, 9, 4, 15, 12, 90, 13};
+       int k=3;
+       int n = arr.length;
+       ArrayList<Integer> result = max_of_subarrays(arr, n, k);
+       System.out.println(result.toString());
+    }
+}
