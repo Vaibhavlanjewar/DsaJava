@@ -36,6 +36,7 @@ public class q26_reverseString {
         while(i<j){
             char temp=ch[i];
             ch[i]=ch[j];
+            ch[j]=temp;
             i++;
             j--;
         }
