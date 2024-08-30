@@ -34,7 +34,7 @@ public class LowerBound {
      int mid=(s+e)/2;
    //if key is greater than the arr[mid]
      if(arr[mid]<=x){
-      ans=mid;
+      ans=arr[mid];
       s=mid+1;
      }
      else{
