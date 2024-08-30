@@ -27,9 +27,9 @@ Constraints:
 
 import java.util.*;
 public class LowerBound {
-    public static int findFloor(long arr[], int n, long x) {
+    public static long findFloor(long arr[], int n, long x) {
      int s=0,e=n-1;
-     int ans=-1;
+     long ans=-1;
      while(s<=e){
      int mid=(s+e)/2;
    //if key is greater than the arr[mid]
