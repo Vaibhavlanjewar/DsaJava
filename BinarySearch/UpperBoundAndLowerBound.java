@@ -30,41 +30,37 @@ import java.util.*;
   
 public class UpperBoundAndLowerBound {
     // lower bound 
-    public static int findFloor(int arr[], int n, int x) {
-        int s=0,e=n-1;
-        int ans=-1;
-        while(s<=e){
-        int mid=(s+e)/2;
-      //if key is greater than the arr[mid]
-        if(arr[mid]<=x){
-         ans=arr[mid];
-         s=mid+1;
-        }
-        else{
-         e=mid-1;
-        }
-   
-        }
-       return ans;
-      }
-      
-      public static int findCeil(int arr[],int n,int x){
-       int s=0,e=n-1;
-        int  ans=-1;
-       while(s<=e){
-        int mid=(s+e)/2;
-         if(arr[mid]>=
-         x){
-          ans=arr[mid];
-           e=mid-1;
-           }
-           else{ 
-             s=mid+1;    
+    public static int getFloor(int x, int[] arr) {
+        int e = arr.length - 1;
+        int s = 0;
+        int ans = -1;
+        while (s <= e) {
+            int mid = (s + e) / 2;
+            if (arr[mid] <= x) {
+                ans = arr[mid];
+                s = mid + 1;
+            } else {
+                e = mid - 1;
             }
-        
-       } 
-           return ans;
-       }
+        }
+        return ans;
+    }
+    
+    public static int getCeil(int x, int[] arr) {
+        int e = arr.length - 1;
+        int s = 0;
+        int ans = -1;
+        while (s <= e) {
+            int mid = (s + e) / 2;
+            if (arr[mid] >= x) {
+                ans = arr[mid];
+                e = mid - 1;
+            } else {
+                s = mid + 1;
+            }
+        }
+        return ans;
+    }
  
       public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
@@ -74,12 +70,12 @@ public class UpperBoundAndLowerBound {
         for(int i=0;i<size;i++){
         arr[i]=sc.nextInt();
         }
-     
+        Arrays.sort(arr);
         //enter key to find lower bound of 
         int key=sc.nextInt();
      
-        System.out.println(findFloor(arr,size,key));
-        System.out.println(findCeil(arr, size, key));
+        System.out.println(getFloor(key,arr));
+        System.out.println(getCeil(key,arr));
        
         }
      
