@@ -62,7 +62,7 @@ Constraints:
      Addition(mat1,mat2);
      for(int i=0;i<n;i++){
          for(int j=0;j<n;j++){
-         System.out.print(mat1[i][j]+" ");         
+         System.out.print(mat1[i][j]+"+ ");         
          }
       }
     }
