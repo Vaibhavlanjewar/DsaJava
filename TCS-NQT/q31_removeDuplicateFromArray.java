@@ -24,19 +24,15 @@ public class q31_removeDuplicateFromArray{
 
    public static ArrayList<Integer> removeDuplicate(int arr[]) {
         // code here
-        int j=1,n=arr.length;
-        TreeSet<Integer>ts=new TreeSet<>();
+        int n=arr.length;
+       
         ArrayList<Integer>res=new ArrayList<>();
         
-        for(int i=1;i<n;i++){
-          
-           ts.add(arr[i]);
-       
+        for(int i=0;i<n;i++){
+          if(!res.contains(arr[i])){
+            res.add(arr[i]);
           }
-        
-        for(Integer Interator:ts){
-          res.add(Interator);
-        }
+          }  
        return res;
    }  
     
