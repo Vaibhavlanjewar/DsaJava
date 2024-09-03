@@ -70,7 +70,7 @@ public class q41_EncryptSting {
       count++;
     }
    }  
-    return sb.toString(); 
+    return sb.reverse().toString(); 
         
     }
      
