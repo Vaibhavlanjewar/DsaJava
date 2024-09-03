@@ -54,40 +54,22 @@ public class q41_EncryptSting {
     //        }
     //     }
     //     return sb.toString();
-    StringBuilder sb=new StringBuilder();
-    int cnt=1;
-     for(int i=0;i<s.length();i++){
-        
-        char a=s.charAt(i);
-        
-        char b=s.charAt(i+1);
-       
-        if(a==b){
-           cnt++;
-        }
-        else{
-            String c=Integer.toString(cnt);
-            sb.append(a+c);
-            cnt=1;
-        }
-        // if(i==s.length()-1 && s.charAt(i)==b){
-        //     cnt++;
-        //     sb.append(b+(char)cnt);
-        // }
-        // else if(i==s.length()-1 && s.charAt(i)!=b){
-        //     String c=Integer.toString(1);
-        //     sb.append(s.charAt(s.length()-1)+c);
-        // }
-       
-        while(i+1<s.length() && s.charAt(i+1)==b){
-            cnt++;
-            i++;
-            }
-            String c=Integer.toString(cnt);
-            sb.append(b+c);
-    
-     }
-     
+
+
+   StringBuilder sb=new StringBuilder();
+   s=s+" ";
+   char ch[]=s.toCharArray();
+   int count=0;
+   for(int i=0;i<ch.length-1;i++){
+    if(ch[i]!=ch[i+1]){
+      sb.append(ch[i]);
+      sb.append(String.valueOf(count+1));
+      count=0;
+    }
+    else{
+      count++;
+    }
+   }  
     return sb.toString(); 
         
     }
