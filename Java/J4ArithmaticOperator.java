@@ -1,4 +1,4 @@
-public class ArithmaticOperator {
+public class J4ArithmaticOperator {
  public static void main(String[] args) {
     
     // Assignment /Arithematic operator 

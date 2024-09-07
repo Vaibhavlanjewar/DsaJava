@@ -1,6 +1,6 @@
 
 
-public class Hello{
+public class J1Hello{
     public static void main(String args[]){
         // System.out.println("Hello todays is 01/09/2024");
 

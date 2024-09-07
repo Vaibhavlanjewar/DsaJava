@@ -1,4 +1,4 @@
-public class logicalOperaor {
+public class J2logicalOperaor {
 public static void main(String[] args) {
     // Logical operator 
     int x=7;

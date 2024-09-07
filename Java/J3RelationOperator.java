@@ -1,4 +1,4 @@
-public class RelationOperator {
+public class J3RelationOperator {
 public static void main(String[] args) {
     // Relational operator 
     System.out.println("Relational operator ");
