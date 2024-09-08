@@ -16,12 +16,17 @@ public static void main(String args[]){
     // print greater elements
     int a=5;
     int b=10;
-    if(a>b){
-        System.out.println("a ids greater than b");
+    int c=1;
+    if(a>b && a>c){
+        System.out.println("a ids greater");
     }
-    else{
+    else if(b>c){ // b>a && b>c , but here we have aleady checked that , b is maller than a
         System.out.println("b is greater");
     }
+    else{
+        System.out.println("c is greater");
+    }
+
 
 }
 }

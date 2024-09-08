@@ -1,4 +1,4 @@
-public class FibonacciArr{
+public class L1_FibonacciDp{
 
     // fibonacci using recursion  time complexity 0(2^n)
     public static int fibbonaciRec(int n){
