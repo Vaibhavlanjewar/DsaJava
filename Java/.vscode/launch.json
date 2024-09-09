@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "J8_DoWhileLoop",
+            "request": "launch",
+            "mainClass": "J8_DoWhileLoop",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Comaparatr",
+            "request": "launch",
+            "mainClass": "Comaparatr",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J1Hello",
+            "request": "launch",
+            "mainClass": "J1Hello",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J2logicalOperaor",
+            "request": "launch",
+            "mainClass": "J2logicalOperaor",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J3RelationOperator",
+            "request": "launch",
+            "mainClass": "J3RelationOperator",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J4ArithmaticOperator",
+            "request": "launch",
+            "mainClass": "J4ArithmaticOperator",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J5ifElse",
+            "request": "launch",
+            "mainClass": "J5ifElse",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J6_TernaryOperator",
+            "request": "launch",
+            "mainClass": "J6_TernaryOperator",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J7_WhileLoop",
+            "request": "launch",
+            "mainClass": "J7_WhileLoop",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "ReverseStaCK",
+            "request": "launch",
+            "mainClass": "ReverseStaCK",
+            "projectName": "Java_7c444914"
+        }
+    ]
+}
