@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Object",
+            "request": "launch",
+            "mainClass": "Object",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J9ForLoop",
             "request": "launch",
             "mainClass": "J9ForLoop",
