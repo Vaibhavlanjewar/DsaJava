@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J13StudentRank",
+            "request": "launch",
+            "mainClass": "J13StudentRank",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J12_2dArray",
+            "request": "launch",
+            "mainClass": "J12_2dArray",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J11Array",
+            "request": "launch",
+            "mainClass": "J11Array",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "Object",
             "request": "launch",
             "mainClass": "Object",
