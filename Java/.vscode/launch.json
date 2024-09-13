@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BufferReaderInput",
+            "request": "launch",
+            "mainClass": "BufferReaderInput",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J13StudentRank",
             "request": "launch",
             "mainClass": "J13StudentRank",
