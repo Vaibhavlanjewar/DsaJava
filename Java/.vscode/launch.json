@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J15StaticVar",
+            "request": "launch",
+            "mainClass": "J15StaticVar",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J14String",
+            "request": "launch",
+            "mainClass": "J14String",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "j11ForEachLoop",
+            "request": "launch",
+            "mainClass": "j11ForEachLoop",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "BufferReaderInput",
             "request": "launch",
             "mainClass": "BufferReaderInput",
