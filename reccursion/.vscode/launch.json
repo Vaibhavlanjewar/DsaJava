@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "subseq",
+            "request": "launch",
+            "mainClass": "subseq",
+            "projectName": "reccursion_eb0bb7"
+        },
+        {
+            "type": "java",
+            "name": "subsequenceOfArray",
+            "request": "launch",
+            "mainClass": "subsequenceOfArray",
+            "projectName": "reccursion_eb0bb7"
+        },
+        {
+            "type": "java",
             "name": "backtracking_question",
             "request": "launch",
             "mainClass": "backtracking_question",
