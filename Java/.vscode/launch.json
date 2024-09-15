@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J16Encapsulation",
+            "request": "launch",
+            "mainClass": "J16Encapsulation",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J15StaticVar",
             "request": "launch",
             "mainClass": "J15StaticVar",
