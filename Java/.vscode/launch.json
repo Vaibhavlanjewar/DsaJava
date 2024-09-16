@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainCalculator",
+            "request": "launch",
+            "mainClass": "Inheritance.MainCalculator",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J17ThisandSupperMethod",
+            "request": "launch",
+            "mainClass": "J17ThisandSupperMethod",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J16Encapsulation",
             "request": "launch",
             "mainClass": "J16Encapsulation",
