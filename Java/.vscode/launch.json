@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J23Bacc",
+            "request": "launch",
+            "mainClass": "J23Bacc",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J22AccessModifie",
+            "request": "launch",
+            "mainClass": "J22AccessModifie",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J20PackageCalulator",
+            "request": "launch",
+            "mainClass": "J20PackageCalulator",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J19MethodOverriding",
+            "request": "launch",
+            "mainClass": "J19MethodOverriding",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "MainCalculator",
             "request": "launch",
             "mainClass": "Inheritance.MainCalculator",
