@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Nquens_Backtracking_que",
+            "request": "launch",
+            "mainClass": "Nquens_Backtracking_que",
+            "projectName": "reccursion_eb0bb7"
+        },
+        {
+            "type": "java",
             "name": "subseq",
             "request": "launch",
             "mainClass": "subseq",
