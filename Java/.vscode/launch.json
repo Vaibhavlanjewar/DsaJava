@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "J29QuizConsole.Main",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J28WrapperClass",
+            "request": "launch",
+            "mainClass": "J28WrapperClass",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J27UpcastingDownCasting",
+            "request": "launch",
+            "mainClass": "J27UpcastingDownCasting",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J26ObjectEquals",
+            "request": "launch",
+            "mainClass": "J26ObjectEquals",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J24PolyMorphismDynamicMehodDispatch",
+            "request": "launch",
+            "mainClass": "J24PolyMorphismDynamicMehodDispatch",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J23Bacc",
             "request": "launch",
             "mainClass": "J23Bacc",
