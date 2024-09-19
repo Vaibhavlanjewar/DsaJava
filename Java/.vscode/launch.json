@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J32AnnonymousInnerClass",
+            "request": "launch",
+            "mainClass": "J32AnnonymousInnerClass",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J31InnerClass",
+            "request": "launch",
+            "mainClass": "J31InnerClass",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J30AbstarctKeyword",
+            "request": "launch",
+            "mainClass": "J30AbstarctKeyword",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "J29QuizConsole.Main",
