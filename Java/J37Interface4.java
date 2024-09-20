@@ -52,6 +52,6 @@ public class J37Interface4 {
          */
         // A.name="Bhandara"; not possible 
         //interface has no memory  
-       
+          
     }
 }

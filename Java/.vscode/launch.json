@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J40Enum3",
+            "request": "launch",
+            "mainClass": "J40Enum3",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J39Enum2",
+            "request": "launch",
+            "mainClass": "J39Enum2",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J38Enum",
+            "request": "launch",
+            "mainClass": "J38Enum",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J37Interface4",
             "request": "launch",
             "mainClass": "J37Interface4",
