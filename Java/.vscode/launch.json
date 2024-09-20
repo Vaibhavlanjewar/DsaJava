@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J37Interface4",
+            "request": "launch",
+            "mainClass": "J37Interface4",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J36Interface3",
+            "request": "launch",
+            "mainClass": "J36Interface3",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J35Interface2",
+            "request": "launch",
+            "mainClass": "J35Interface2",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J34Interfaces1",
+            "request": "launch",
+            "mainClass": "J34Interfaces1",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J34Interfaces",
+            "request": "launch",
+            "mainClass": "J34Interfaces",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J31AbstractInnerClass",
+            "request": "launch",
+            "mainClass": "J31AbstractInnerClass",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J32AnnonymousInnerClass",
             "request": "launch",
             "mainClass": "J32AnnonymousInnerClass",
