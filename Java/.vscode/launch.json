@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J47UserInpBufferReaderScanner",
+            "request": "launch",
+            "mainClass": "J47UserInpBufferReaderScanner",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J46DuckingThrowException",
+            "request": "launch",
+            "mainClass": "J46DuckingThrowException",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J45CustomException",
             "request": "launch",
             "mainClass": "J45CustomException",
