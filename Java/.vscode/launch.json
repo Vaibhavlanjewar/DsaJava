@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J45CustomException",
+            "request": "launch",
+            "mainClass": "J45CustomException",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J44ExeptionHandling",
             "request": "launch",
             "mainClass": "J44ExeptionHandling",
