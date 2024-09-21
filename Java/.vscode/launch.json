@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J44ExeptionHandling",
+            "request": "launch",
+            "mainClass": "J44ExeptionHandling",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J43lambdaExpreesionFunctionInterface",
+            "request": "launch",
+            "mainClass": "J43lambdaExpreesionFunctionInterface",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J42lambdaExpreesionFunctionInterface",
+            "request": "launch",
+            "mainClass": "J42lambdaExpreesionFunctionInterface",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J42FunctionalInterface",
+            "request": "launch",
+            "mainClass": "J42FunctionalInterface",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J41Annotation",
+            "request": "launch",
+            "mainClass": "J41Annotation",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J40Enum3",
             "request": "launch",
             "mainClass": "J40Enum3",
