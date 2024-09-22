@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J48TryWithResourseFinallyBlock",
+            "request": "launch",
+            "mainClass": "J48TryWithResourseFinallyBlock",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J47UserInpBufferReaderScanner",
             "request": "launch",
             "mainClass": "J47UserInpBufferReaderScanner",
