@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "J55StreamsAndFilter",
+            "request": "launch",
+            "mainClass": "J55StreamsAndFilter",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J54ForEachMeth",
+            "request": "launch",
+            "mainClass": "J54ForEachMeth",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J53Comaparatr",
+            "request": "launch",
+            "mainClass": "J53Comaparatr",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J52Collections",
+            "request": "launch",
+            "mainClass": "J52Collections",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J51RaceConditionMutation",
+            "request": "launch",
+            "mainClass": "J51RaceConditionMutation",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
+            "name": "J49Treads",
+            "request": "launch",
+            "mainClass": "J49Treads",
+            "projectName": "Java_7c444914"
+        },
+        {
+            "type": "java",
             "name": "J48TryWithResourseFinallyBlock",
             "request": "launch",
             "mainClass": "J48TryWithResourseFinallyBlock",

@@ -20,7 +20,7 @@ class Student implements Comparable<Student>{
         return this.age-that.age;
     }
 }
-public class Comaparatr {
+public class J53Comaparatr {
 
    
 
@@ -78,22 +78,24 @@ public class Comaparatr {
 
       // student class 
     
-      Comparator<Student>stdComp=new Comparator<Student>() {
-        public int compare(Student i,Student j){
-            if(i.age>j.age){
-                return 1;
-            }
-            else{
-                return -1;
-            }
-        }
-      };
+    //   Comparator<Student>stdComp=new Comparator<Student>() {
+    //     public int compare(Student i,Student j){
+    //         if(i.age>j.age){
+    //             return 1;
+    //         }
+    //         else{
+    //             return -1;
+    //         }
+    //     }
+    //   };
 
 
       ArrayList<Student>stud=new ArrayList<>();
       stud.add(new Student(21,"vnbl"));
       stud.add(new Student(18,"suraj"));
       stud.add(new Student(25,"alekh"));
+      stud.add(new Student(25,"abhi"));
+
 
        System.out.println("b4 sorting"+stud);
        Collections.sort(stud);
