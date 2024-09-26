@@ -32,20 +32,26 @@ The output format for testing
 
 Written program code should generate two outputs, each separated by a single space character(see the example)
 Additional messages in the output will result in the failure of test case */
+
 import java.util.*;
 public class q1{
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        int v=sc.nextInt();
-        int w=sc.nextInt();
-        
-        float t=((4*v)-w)/2;
-        float f=(w-2*v)/2;
-        if(w>=2 && w%2==0 && w>v){
-        System.out.println( "TF= "+(int)t+" FW= "+(int)f);
-        }
-        else{
-            System.out.println("INVALID INPUT");
-        }
-    }
+
+public static void main(String args[]){
+
+  Scanner sc=new Scanner(System.in);
+  int v=sc.nextInt(); // tot veh
+  int w=sc.nextInt(); // tot wheels 
+  int f=(w-2*v)/2;
+  int t=(v-f);
+ 
+  if(w>=2 && w%2==0 && v<w){
+
+    System.out.println("TW="+t+" "+"FW="+f);
+   }
+   else{
+  System.out.println("INVALID INPUT");
+   }
+  
+  }
+
 }
