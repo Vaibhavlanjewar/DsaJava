@@ -11,25 +11,26 @@ Input 1:
 Output :
 
 0   → number of * and # are equal */
+
 import java.util.*;
 public class q2 {
 public static void main(String args[]){
-    Scanner sc=new Scanner(System.in);
-    
-    // input string 
-    String str=sc.nextLine();
-    int cnt_star=0;
-    int cnt_hash=0;
-
-    for(int i=0;i<str.length();i++){
-        if(str.charAt(i)=='*'){
-            cnt_star++;
-        }
-        else if(str.charAt(i)=='#'){
-            cnt_hash++;
-        }
+   Scanner sc=new Scanner(System.in);
+   String str=sc.nextLine();
+   int cnt1s=0;
+   int cnt2h=0;
+   for(int i=0;i<str.length();i++){
+     char ch=str.charAt(i);
+     if(ch=='*'){
+      cnt1s++;
+     }
+     else if(ch=='#'){
+       cnt2h++;
+      }
+     
     }
-    int ans=cnt_star-cnt_hash;
-    System.out.println(ans);
-}
+    
+   System.out.println(cnt1s-cnt2h);
+    
+  }
 }
