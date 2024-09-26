@@ -10,6 +10,17 @@ Input :
 Output :
 8     -> Maximum number of guests on cruise at an instance.
 
+
+             7 0 5 1 3 
+
+             1 2 1 3 4
+
+   diff add  6 6 9 9 9
+   dif sub   0  4 8 6 5
+   max       6 6 8 8 8
+
+
+
 Explanation:
 
 1st hour:
@@ -80,19 +91,18 @@ import java.util.*;
 public class q5 {
     public static void main(String args[]){
     Scanner sc=new Scanner(System.in);
-    int size=sc.nextInt();
-    int []E=new int[size];
-    int []L=new int[size];
-    
-    for(int i=0;i<size;i++){
-    E[i]=sc.nextInt();
+    int T=sc.nextInt();
+    int []E=new int[T];
+    int []L=new int[T];
 
-    }
-    for(int i=0;i<size;i++){
-        L[i]=sc.nextInt();
-        }
-
-    int maxGeuest=0;
+     for(int i=0;i<T;i++){
+      E[i]=sc.nextInt();
+     }
+     for(int i=0;i<T;i++){
+      L[i]=sc.nextInt();
+      }
+/*
+ int maxGeuest=0;
     int sum=0;
     for(int i=0;i<size;i++){
     sum+=E[i]-L[i];
@@ -100,7 +110,19 @@ public class q5 {
     
     }
     System.out.println("Maximun number of geuest are "+maxGeuest);
-   
+
+*/
+    //  Method 2 :
+    int diffA=E[0]-L[0];
+    int diffS=diffA;
+    int max=diffA;c
+    for(int i=1;i<T;i++){c
+       diffA=diffS+E[i];
+       diffS=diffA-L[i];
+       max=Math.max(max,diffS);
+    }
+    System.out.println(max);
+
     
     }
 }
