@@ -57,7 +57,7 @@ public class q4 {
       }
     }
 
-    System.out.println(maxLength(arr, r, c));
+    System.out.println(maxLength(arr, r, c)); // return row which contains max consecutive once 
 
   }
 }
