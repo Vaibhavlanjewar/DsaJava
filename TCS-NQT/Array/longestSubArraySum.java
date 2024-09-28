@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class longestSubArraySum {
     public static int longsubarraysum(int arr[],int k){
         HashMap<Integer,Integer>mp=new HashMap<>();
