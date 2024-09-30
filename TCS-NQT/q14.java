@@ -53,10 +53,7 @@ public class q14 {
        if(ch[i]=='G'){
           ch[i]='x';
        }
-       if(ch[i]=='5' && ch[i+1]=='6' && j<n){
-        ch[i]='x';
-        ch[j]='x';
-       }
+      
      } 
    
      for(char i:ch){
