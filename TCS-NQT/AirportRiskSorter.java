@@ -90,59 +90,59 @@
 //     }
 // }
 
-import java.util.*;
+// import java.util.*;
 
-public class AirportRiskSorter {
+// public class AirportRiskSorter {
 
-    // Method to swap elements in the array
-    public static void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
+//     // Method to swap elements in the array
+//     public static void swap(int[] nums, int i, int j) {
+//         int temp = nums[i];
+//         nums[i] = nums[j];
+//         nums[j] = temp;
+//     }
 
-    // Method to sort the array based on risk values
-    public static void sort(int[] nums) {
-        int start = 0, index = 0, end = nums.length - 1;
+//     // Method to sort the array based on risk values
+//     public static void sort(int[] nums) {
+//         int start = 0, index = 0, end = nums.length - 1;
 
-        while (index <= end) {
-            if (nums[index] == 0) {
-                swap(nums, index, start);
-                index++;
-                start++;
-            } else if (nums[index] == 2) {
-                swap(nums, index, end);
-                end--;
-            } else {
-                index++; // Skip over 1s
-            }
-        }
-    }
+//         while (index <= end) {
+//             if (nums[index] == 0) {
+//                 swap(nums, index, start);
+//                 index++;
+//                 start++;
+//             } else if (nums[index] == 2) {
+//                 swap(nums, index, end);
+//                 end--;
+//             } else {
+//                 index++; // Skip over 1s
+//             }
+//         }
+//     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<Integer> numList = new ArrayList<>();  // List to store integers
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+//         List<Integer> numList = new ArrayList<>();  // List to store integers
 
-        System.out.println("Enter the risk values (0, 1, or 2), and press Ctrl+D (or Ctrl+Z on Windows) when done:");
+//         System.out.println("Enter the risk values (0, 1, or 2), and press Ctrl+D (or Ctrl+Z on Windows) when done:");
 
-        // Read input values until no more integers are available
-        while (scanner.hasNextInt()) {
-            numList.add(scanner.nextInt());
-        }
+//         // Read input values until no more integers are available
+//         while (scanner.hasNextInt()) {
+//             numList.add(scanner.nextInt());
+//         }
 
-        // Convert the list to an array
-        int[] nums = numList.stream().mapToInt(i -> i).toArray();
+//         // Convert the list to an array
+//         int[] nums = numList.stream().mapToInt(i -> i).toArray();
 
-        // Sort the array
-        sort(nums);
+//         // Sort the array
+//         sort(nums);
 
-        // Print the sorted array
-        System.out.print("Sorted items: ");
-        for (int num : nums) {
-            System.out.print(num + " ");
-        }
-        System.out.println(); // New line after output
+//         // Print the sorted array
+//         System.out.print("Sorted items: ");
+//         for (int num : nums) {
+//             System.out.print(num + " ");
+//         }
+//         System.out.println(); // New line after output
 
-        scanner.close();
-    }
-}
+//         scanner.close();
+//     }
+// }
