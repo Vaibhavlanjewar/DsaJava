@@ -51,7 +51,7 @@ public class q3{
     arr[i]=sc.nextInt();
     }
    
-    int cnt=1;
+  /*  int cnt=1;
     int max=arr[0];
 
 
@@ -61,7 +61,8 @@ public class q3{
        cnt++;
       }
     }
-     System.out.println(cnt);// rivision 
+     System.out.println(cnt);// rivision   
+   */
    }
 }
 
