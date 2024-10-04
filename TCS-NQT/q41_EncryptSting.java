@@ -77,7 +77,10 @@ public class q41_EncryptSting {
     public static void main(String args[]){
       Scanner sc=new Scanner(System.in);
       String str=sc.nextLine();
-      System.out.print(encryptString(str));
-      
+      // System.out.print(encryptString(str));
+      // String v="vab";
+      // System.out.println(str.indexOf(v));
+      // str=str.toLowerCase();
+      // System.out.println(str);
     }
 }
