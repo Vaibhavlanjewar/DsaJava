@@ -1,0 +1,3 @@
+Today the date 6th of october.. Its 12:25 Am right now . I have to wake up at 6:00 Am early in the moring. Firstly I fresh and then I do exrcise for 10-15 min.Then I start learning about Stacks .
+Then I have to learn the DBMS . Then I look my project .. As I have to give the presentation for mini project and also useful for my Technical Interview also .
+I have to revise the concepts of machine learning and deep learing .. I think I need to the learn python, numpy,Pandas,Matplotlib,Sklearn ,NLTK, tensorFlow...
