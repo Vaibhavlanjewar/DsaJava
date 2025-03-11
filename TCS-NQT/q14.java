@@ -32,38 +32,40 @@ Only uppercase alphabets in the input string*/
 import java.util.*;
 
 public class q14 {
-    public static void main(String args[]){
- 
-     Scanner sc=new Scanner(System.in);
-     String str=sc.next();
-     StringBuilder sb=new StringBuilder();
-     char []ch=str.toCharArray();
-     int n=ch.length;
-     for(int i=0;i<ch.length;i++){
-      int j=i+1;
-      if(ch[i]=='x') continue;
-      if( ch[i]=='E' && ch[i+1]=='F' && j<n){
-            ch[i]='x';
-            ch[j]='x';
-       }
-       if(ch[i]=='5' && ch[i+1]=='6' && j<n){
-        ch[i]='x';
-        ch[j]='x';
-       }
-       if(ch[i]=='G'){
-          ch[i]='x';
-       }
-      
-     } 
-   
-     for(char i:ch){
-   
-       if(i=='x')continue;
-       else{
-        sb.append(i);
-        }      
-      } 
-      System.out.println(sb.toString());
- 
+  public static void main(String args[]) {
+
+    Scanner sc = new Scanner(System.in);
+    String str = sc.next();
+    StringBuilder sb = new StringBuilder();
+    char[] ch = str.toCharArray();
+    int n = ch.length;
+    for (int i = 0; i < ch.length; i++) {
+      int j = i + 1;
+      if (ch[i] == 'x')
+        continue;
+      if (ch[i] == 'E' && ch[i + 1] == 'F' && j < n) {
+        ch[i] = 'x';
+        ch[j] = 'x';
+      }
+      if (ch[i] == '5' && ch[i + 1] == '6' && j < n) {
+        ch[i] = 'x';
+        ch[j] = 'x';
+      }
+      if (ch[i] == 'G') {
+        ch[i] = 'x';
+      }
+
     }
+
+    for (char i : ch) {
+
+      if (i == 'x')
+        continue;
+      else {
+        sb.append(i);
+      }
+    }
+    System.out.println(sb.toString());
+
+  }
 }
