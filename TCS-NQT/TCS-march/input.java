@@ -12,7 +12,9 @@ public class input{
   for(int i=0;i<str.length;i++){
      int n=Integer.parseInt(str[i]);
      arr[i]=n;
-    }
+    } 
+
+  
  
    for(int i:arr){
      System.out.print(i);
